@@ -11,7 +11,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props;
 
   return (
-    <html lang="ru" className="bg-[var(--color-background)]">
+    <html lang="ru" className="bg-background">
       <body>
         <main>{children}</main>
       </body>
