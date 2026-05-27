@@ -18,7 +18,7 @@ export function Hero() {
               Подготовьте ребёнка к{" "}
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">олимпиадам</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-xl text-pretty leading-relaxed">
+            <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 text-pretty leading-relaxed">
               Качественные курсы для учеников 1-4 классов. Интерактивные уроки, 
               понятные видеоразборы и поддержка преподавателей помогут вашему 
               ребёнку достичь высоких результатов.
