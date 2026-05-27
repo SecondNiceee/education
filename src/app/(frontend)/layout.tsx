@@ -1,19 +1,20 @@
-import React from 'react'
-import './styles.css'
+import React from "react";
+import "./globals.css";
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
-}
+  title: "ОбразованиеПлюс — Бесплатные курсы для школьников 1-6 класс",
+  description:
+    "Улучшите успеваемость вашего ребёнка с бесплатными онлайн-курсами по всем школьным предметам. Интерактивные уроки для учеников с 1 по 6 класс.",
+};
 
 export default async function RootLayout(props: { children: React.ReactNode }) {
-  const { children } = props
+  const { children } = props;
 
   return (
-    <html lang="en">
+    <html lang="ru" className="bg-[var(--color-background)]">
       <body>
         <main>{children}</main>
       </body>
     </html>
-  )
+  );
 }
