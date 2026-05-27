@@ -1,11 +1,11 @@
-import { Clock, Users } from "lucide-react";
+import { Clock, TrendingUp } from "lucide-react";
 
 interface CourseCardProps {
   title: string;
   description: string;
   grade: string;
   lessons: number;
-  students: number;
+  level: number;
   icon: string;
   color: string;
 }
@@ -15,36 +15,36 @@ export function CourseCard({
   description,
   grade,
   lessons,
-  students,
+  level,
   icon,
   color,
 }: CourseCardProps) {
   return (
-    <div className="group bg-[var(--color-card)] rounded-2xl border border-[var(--color-border)] p-6 hover:shadow-lg hover:border-[var(--color-primary)]/30 transition-all duration-300 cursor-pointer">
-      <div
-        className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl mb-4"
-        style={{ backgroundColor: `${color}20` }}
-      >
-        {icon}
+    <div className="group bg-white rounded-2xl border border-slate-100 p-6 hover:shadow-xl hover:shadow-slate-200/50 hover:border-indigo-100 transition-all duration-300 cursor-pointer">
+      <div className="flex items-start justify-between mb-4">
+        <div
+          className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl"
+          style={{ backgroundColor: `${color}15` }}
+        >
+          {icon}
+        </div>
+        <div className="flex items-center gap-1 bg-slate-50 px-3 py-1.5 rounded-full">
+          <TrendingUp className="w-3.5 h-3.5 text-indigo-500" />
+          <span className="text-xs font-semibold text-slate-700">{level} уровней</span>
+        </div>
       </div>
-      <div className="inline-block bg-[var(--color-secondary)] text-[var(--color-secondary-foreground)] text-xs font-medium px-2.5 py-1 rounded-full mb-3">
+      <div className="inline-block bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">
         {grade}
       </div>
-      <h3 className="text-xl font-semibold text-[var(--color-foreground)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-indigo-600 transition-colors">
         {title}
       </h3>
-      <p className="text-[var(--color-muted-foreground)] text-sm mb-4 line-clamp-2">
+      <p className="text-slate-500 text-sm mb-4 leading-relaxed line-clamp-2">
         {description}
       </p>
-      <div className="flex items-center gap-4 text-sm text-[var(--color-muted-foreground)]">
-        <div className="flex items-center gap-1.5">
-          <Clock className="w-4 h-4" />
-          <span>{lessons} уроков</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <Users className="w-4 h-4" />
-          <span>{students.toLocaleString("ru-RU")}</span>
-        </div>
+      <div className="flex items-center gap-2 text-sm text-slate-500">
+        <Clock className="w-4 h-4" />
+        <span>{lessons} уроков</span>
       </div>
     </div>
   );
